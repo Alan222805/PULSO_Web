@@ -1,0 +1,74 @@
+{% extends 'Comun.html' %}
+
+{% load static %}
+
+{% block styles %}
+<script src="https://kit.fontawesome.com/246e95ada1.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="{% static 'css/productos.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Productos</h1>
+
+<div class="productos">
+        {% for product in products %}
+        <div class="card-product">
+            <div class="imagen-nombre">
+                <div class="container-imagen">
+                    <img class="imagen_producto" src="{% static product.imagen %}" alt="">
+                </div>
+                <p class="id-producto" >ID: {{ product.id }}</p>
+                <h2 class="nombre-producto">{{product.nombre}}</h2>
+            </div>
+            <hr>
+            <div class="container-informacion">
+                <section class="especificaciones">
+                    <ul class="list-especs">
+                        <li class="espec-item">
+                            <div class="espec-image">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                            <div class="espec-information">
+                                <p>Ryzen 7 5700X</p>
+                            </div>
+                        </li>
+                        <li class="espec-item">
+                            <div class="espec-image">
+                                <img class="image-espec" src="{% static 'imagenes\pulgada.png' %}"alt="">
+                            </div>
+                            <div class="espec-information">
+                                <p>15.6"</p>
+                            </div>
+                        </li>
+                        <li class="espec-item">
+                            <div class="espec-image">
+                                <img class="image-espec" src="{% static 'imagenes\ssd.png' %}" alt="">
+                            </div>
+                            <div class="espec-information">
+                                <p>512 GB</p>
+                            </div>
+                        </li>
+                        <li class="espec-item">
+                            <div class="espec-image">
+                                <img class="image-espec" src="{% static 'imagenes\ram.png' %}" alt="">
+                            </div>
+                            <div class="espec-information">
+                                <p>16 GB</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="botones-accion">
+                    <a class="product-link" href="{{product.url_producto}}" target="_blank">
+                        <button class="button">Comprar</button>
+                    </a>
+                    <a class="product-link" href="">
+                        <button class="button">Ver más</button>
+                    </a>
+                </section>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

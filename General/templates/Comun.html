@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ico" href="{% static 'imagenes\logo-pulso-Photoroom.png' %}">
+    <title>PULSO⚡</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    {% block styles %}
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/estilos_comun.css' %}">
+    <script src="https://kit.fontawesome.com/246e95ada1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <div class="contenedor-logo">
+                <a id="logo-link" href="index.html">
+                    <img id="img-logo-nav" src="{% static 'imagenes/logo-pulso-Photoroom.png' %}" alt="Logo de la empresa">
+                </a>
+            </div>
+            <ul id="item-list">
+                <li class="nav-item"><a href="{% url 'home' %}">Inicio</a></li>
+                <li class="nav-item"><a href="{% url 'productos:lista_productos' %}">Tecnología</a></li>
+                <li class="nav-item"><a href="ropa.html">Ropa</a></li>
+                <li class="nav-item"><a href="calzado.html">Calzado</a></li>
+                <li class="nav-item"><a href="{% url 'sobre_nosotros' %}">Sobre nosotros</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="footer">
+        <section class="section-footer" id="contacto">
+            <h2>Contáctanos</h2>
+            <p>pulso.mka@gmail.com<p>
+        </section>
+        <section class="section-footer" id="social-networks">
+            <ul class="network-list">
+                <li class="item-network">
+                    <div class="container-network">
+                        <a class="link-network" href="https://www.instagram.com/pulso.mka/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <p>INSTAGRAM</p>
+                    </div>
+                </li>
+
+                <li class="item-network">
+                    <div class="container-network">
+                        <a class="link-network" href="#" target="_blank">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <p>FACEBOOK</p>
+                    </div>
+                </li>
+
+                <li class="item-network">
+                    <div class="container-network">
+                        <a class="link-network" href="https://www.tiktok.com/@pulso_mka" target="_blank">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <p>TIKTOK</p>
+                    </div>
+                </li>
+
+
+            </ul>
+        </section>
+        <section class="section-footer" id="derechos-autor">
+            <img id="img-logo-footer"  src="{% static 'imagenes/logo-pulso-Photoroom.png' %}" alt="">
+            <p>© 2024 PULSO. Todos los derechos reservados.</p>
+        </section>
+    </footer>
+
+</body>
+
+</html>

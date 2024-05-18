@@ -1,0 +1,61 @@
+{% extends 'Comun.html' %}
+
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/sobreNosotros.css' %}">
+{% endblock %}
+
+{% block content %}
+<article class="article">
+    <h1>Conoce más sobre <span id="word-pulso">PULSO</span></h1>
+    <section class="container-mision">
+        <div class="mision-information">
+            <h2><span>MISIÓN</span></h2>
+            <div class="information">
+                <p>Nuestra misión es simplificar la búsqueda de tecnología y moda, brindándote las mejores recomendaciones y ofertas disponibles en el mercado. Nos esforzamos por ser tu primer recurso confiable y tu comunidad para descubrir productos que enriquezcan tu vida y te mantengan a la vanguardia.</p>
+            </div>
+            
+        </div>
+        <div class="image-mision-container">
+            <img src="{% static 'imagenes/pexels-knownasovan-57690.jpg' %}" alt="">
+        </div>
+    </section>
+</article>
+
+<article class="article" id="que-hacemos-container">
+    <img src=" {% static 'imagenes/pexels-lemonzandtea-1422292.jpg' %}" alt="">
+    <section class="information-que-hacemos">
+        <h2><span>¿QUÉ HACEMOS?</span></h2>
+        <div class="information">
+            <p>En PULSO, nos dedicamos a investigar y analizar las últimas tendencias en tecnología y moda para ofrecerte las mejores recomendaciones y ofertas. Nuestro objetivo es ayudarte a encontrar los productos que mejor se adapten a tus necesidades y estilo de vida.</p>
+        </div>
+    </section>
+</article>
+
+<article class="article" id="valores">
+    <h2>Nuestros Valores</h2>
+    <section class="valores-container">
+        <div class="valores-item">
+            <i class="fa-solid fa-handshake"></i>
+            <p>Integridad</p>
+        </div>
+        <div class="valores-item">
+            <i class="fa-solid fa-heart"></i>
+            <p>Pasion</p>
+        </div>
+        <div class="valores-item">
+            <i class="fa-solid fa-user-lock"></i>
+            <p>Confianza</p>
+        </div>
+        <div class="valores-item">
+            <i class="fa-solid fa-calendar-check"></i>
+            <p>Compromiso</p>
+        </div>
+        <div class="valores-item">
+            <i class="fa-solid fa-lightbulb"></i>
+            <p>Innovacion</p>
+        </div>
+    </section>
+</article>
+{% endblock %}
