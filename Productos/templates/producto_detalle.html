@@ -1,0 +1,119 @@
+{% extends 'Comun.html' %}
+
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/producto_detalles.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<!-- <h1>{{producto.nombre}}</h1>
+
+    -->
+<div class="container">
+    <section class="izquierda">
+        <div class="imagenes-producto">
+            <div class="img-main-container">
+                {% for imagen in imagenes %}
+                    {% if imagen.tipo == 'main' %}
+                        <div class="container-imagen-producto">
+                            <img class="img-product" src="{% static imagen.url_imagen_producto %}" alt="">
+                        </div>
+                    {% endif %}
+                {% endfor %} 
+            </div>
+            <div class="img-small-container">
+                {% for imagen in imagenes %}
+                    {% if imagen.tipo == 'small' %}
+                        <div class="container-imagen-producto">
+                            <div class="fondo-imagen">
+                                <img class="img-product" src="{% static imagen.url_imagen_producto %}" alt="">
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>   
+        </div>
+
+        <h2 class="precio">$24,988.80</h2>
+
+        <a class="product-link" href="{{producto.url_producto}}" target="_blank">
+            <button class="button">Comprar</button>
+        </a>
+    </section>
+    
+    <section class="derecha">
+        <div class="nombre-reseña">
+            <h1 id="nombre-producto">{{producto.nombre}}</h1>
+            <div class="reseñas">
+                <p>4.8 <i class="fa-solid fa-star"></i></p>
+                <p>|</p>
+                <p>70 Calificaciones</p>
+            </div>
+        </div>
+
+        <div class="caracteristicas-producto">
+            <h2>Características del producto:</h2>
+            <ul class="list-especs">
+                <li class="espec-item">
+                    <div class="espec-image">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <div class="espec-information">
+                        <p>Ryzen 7 5700X</p>
+                    </div>
+                </li>
+                <li class="espec-item">
+                    <div class="espec-image">
+                        <img class="image-espec" src="{% static 'imagenes\pulgada.png' %}"alt="">
+                    </div>
+                    <div class="espec-information">
+                        <p>15.6"</p>
+                    </div>
+                </li>
+                <li class="espec-item">
+                    <div class="espec-image">
+                        <img class="image-espec" src="{% static 'imagenes\ssd.png' %}" alt="">
+                    </div>
+                    <div class="espec-information">
+                        <p>512 GB</p>
+                    </div>
+                </li>
+                <li class="espec-item">
+                    <div class="espec-image">
+                        <i class="image-espec fa-solid fa-memory"></i>
+                    </div>
+                    <div class="espec-information">
+                        <p>16 GB</p>
+                    </div>
+                </li>
+                <li class="espec-item">
+                    <div class="espec-image">
+                        <i class="fa-regular fa-keyboard"></i>
+                    </div>
+                    <div class="espec-information">
+                        <p>Teclado retroiluminado</p>
+                    </div>
+                </li>
+                <li class="espec-item">
+                    <div class="espec-image">
+                        <img class="image-espec" src="{% static 'imagenes\gpu.png' %}" alt="">
+                    </div>
+                    <div class="espec-information">
+                        <p>Tarjeta gráfica NVIDIA GeForce RTX 3060</p>
+                    </div>
+                </li>
+                <li class="espec-item">
+                    <div class="espec-image">
+                        <img class="image-espec" src="{% static 'imagenes\puerto-usb.png' %}" alt="">
+                    </div>
+                    <div class="espec-information">
+                        <p>4 puertos usb y HDMI</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+{% endblock %}

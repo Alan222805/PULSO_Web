@@ -74,7 +74,7 @@ h1{
 }
 
 .image-espec{
-    width: 40px;
+    width: 42px;
 }
 
 .espec-information p{
@@ -106,8 +106,8 @@ h1{
 }
 
 .button {
-    --😀: #003B46; /* O #0096D6, o #333333 */
-    --😀😀: #001F2A;
+    --😀: #000; /* O #0096D6, o #333333 */
+    --😀😀: #000;
     --😀😀😀: #001319;
     cursor: pointer;
     width: 100%;
@@ -124,10 +124,9 @@ h1{
     background: var(--😀);
     border: 2px solid var(--😀😀);
     border-radius: .75rem;
-    box-shadow: 0 8px 0 var(--😀😀);
-    transform: skew(-10deg);
+   
     transition: all .1s ease;
-    filter: drop-shadow(0 15px 15px var(--😀😀😀));
+    filter: drop-shadow(0 10px 10px var(--😀😀😀));
 }
 
 .button:active {

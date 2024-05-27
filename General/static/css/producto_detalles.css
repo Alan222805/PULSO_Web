@@ -1,0 +1,152 @@
+main{
+    padding: 70px 40px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.izquierda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.imagenes-producto{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.img-main-container .img-product{
+    width: 95%;
+    height: auto;
+}
+
+.img-small-container{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.img-small-container .img-product{
+    height: 125px;
+    width: auto;
+    transition: all ease 0.5s;
+}
+
+.img-small-container .img-product:hover{
+    cursor: pointer;
+    transform: scale(1.9);
+    filter: drop-shadow(0 10px 15px black);
+}
+
+.img-small-container .fondo-imagen{
+    background-color: #52526410;
+    padding: 5px;
+    border-radius: 12px;
+}
+
+.nombre-reseña{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#nombre-producto{
+    font-size: 50px;
+}
+
+.reseñas{
+    display: flex;
+    justify-content: end;
+    gap: 13px;
+}
+
+.reseñas p{
+    font-size: 25px;
+    font-weight: bold;
+    color: #525264;
+}
+
+.reseñas p i{
+    color: #25445B;
+}
+
+.reseñas p:nth-child(2){
+    color: #000000;
+    font-weight: 400;
+    opacity: 59%;
+}
+
+
+.caracteristicas-producto{
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    margin-top: 31px;
+}
+
+.list-especs{
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.espec-item{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.espec-image i{
+    font-size: 40px;
+}
+
+.image-espec{
+    width: 42px;
+}
+
+.espec-information p{
+    font-size: 17px;
+    font-weight: 800;
+}
+
+
+.product-link{
+    text-decoration: none;
+}
+
+.button{
+    background-color: #25445B;
+    color: white;
+    height: 78px;
+    width: 225px;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: 0 10px 25px #25445B;
+    transition: ease-in-out 0.3s;
+    border: none;
+    outline: none;
+}
+
+.button:hover{
+    cursor: pointer;
+    transform: scale(1.2) rotate(5deg);
+}
+
+.button:active{
+    background-color: #4679a0;
+}
+
+.precio{
+    font-size: 50px;
+    font-weight: bold;
+    color: #000;
+}

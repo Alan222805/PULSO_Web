@@ -3,8 +3,6 @@
 {% load static %}
 
 {% block styles %}
-<script src="https://kit.fontawesome.com/246e95ada1.js" crossorigin="anonymous"></script>
-
 <link rel="stylesheet" href="{% static 'css/productos.css' %}">
 {% endblock %}
 
@@ -51,7 +49,7 @@
                         </li>
                         <li class="espec-item">
                             <div class="espec-image">
-                                <img class="image-espec" src="{% static 'imagenes\ram.png' %}" alt="">
+                                <i class="image-espec fa-solid fa-memory"></i>
                             </div>
                             <div class="espec-information">
                                 <p>16 GB</p>
@@ -63,8 +61,8 @@
                     <a class="product-link" href="{{product.url_producto}}" target="_blank">
                         <button class="button">Comprar</button>
                     </a>
-                    <a class="product-link" href="">
-                        <button class="button">Ver más</button>
+                    <a class="product-link" href="{% url 'productos:producto_detalle' product.id %}">
+                        <button class="button">Ver detalles</button>
                     </a>
                 </section>
             </div>
